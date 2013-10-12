@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Posts CRUD</h1>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  <% @posts.each do |post| %>
+  <tr>
+    <td><a href='/show_post/<%= post.id %>'><%= post.title %></a></td>
+    <td><a href='/edit_post/<%= post.id %>'>Edit</a></td>
+    <td><a href='/delete_post/<%= post.id %>'>Delete</a></td>
+  </tr>
+
+  <% end %><br><br>
+
+  <a href="/new_post">Create New Post</a><br>
+
+</div>
